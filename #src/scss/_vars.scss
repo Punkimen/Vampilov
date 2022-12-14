@@ -1,0 +1,146 @@
+$md1: 1440px;
+$md2: 1200px;
+$md3: 992px;
+$md4: 767px;
+$md5: 568px;
+$md6: 412px;
+
+:root {
+    --color-orange: #C56C1A;
+    --color-orange_hovered: #eb7a11;
+}
+
+html,
+body {
+    height: 100%;
+    box-sizing: border-box;
+
+}
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Bitter', serif;
+    background: #EAE3D3;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.2;
+    color: #2A2926;
+    overflow-x: hidden;
+
+    &.overlay {
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
+ul,
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+
+    &.show-menu {
+        .mobile-menu {
+            margin-left: 0;
+
+            &::after {
+                display: block;
+            }
+        }
+
+        .page__content {
+            margin-right: -270px;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        position: relative;
+        transition: all ease .3s;
+    }
+}
+
+.container {
+    position: relative;
+    padding: 0 20px;
+    max-width: 1370px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.btn-reset {
+    cursor: pointer;
+    display: block;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.main-link {
+    color: var(--color-orange);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.btn {
+    font-family: inherit;
+    font-weight: 600;
+    color: #fff;
+    padding: 12px 40px 12px 40px;
+    text-transform: uppercase;
+    background: var(--color-orange);
+    line-height: 29px;
+    transition: all ease .3s;
+
+    &:hover {
+        background: var(--color-orange_hovered);
+    }
+
+    &_light {
+        background: #F7F3EA;
+        color: var(--color-orange);
+
+        &:hover {
+            background: var(--color-orange);
+            color: #fff;
+        }
+    }
+}
+
+.btn-arrow {
+    font-weight: 400 !important;
+}
